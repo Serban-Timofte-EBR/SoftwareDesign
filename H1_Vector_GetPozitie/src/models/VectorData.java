@@ -13,16 +13,48 @@ public class VectorData {
         this.rankMap = computeRanks();
     }
 
+//    private Map<Integer, Integer> computeRanks() {
+//        List<Integer> sortedList = new ArrayList<>(punctaje);
+//        sortedList.sort(Collections.reverseOrder());
+//
+//        Map<Integer, Integer> rankMap = new HashMap<>();
+//        int rank = 1;
+//        for (int val : sortedList) {
+//            rankMap.put(val, rank);
+//            rank++;
+//        }
+//        return rankMap;
+//    }
+
     private Map<Integer, Integer> computeRanks() {
-        List<Integer> sortedList = new ArrayList<>(punctaje);
-        sortedList.sort(Collections.reverseOrder());
+        if (punctaje.isEmpty()) {
+            return new HashMap<>();
+        }
+
+        // Count sort
+        int minValue = Collections.min(punctaje);
+        int maxValue = Collections.max(punctaje);
+
+        int range = maxValue - minValue + 1;
+        int[] countArray = new int[range];
+
+        for (int num : punctaje) {
+            countArray[num - minValue] = 1;
+        }
+
+        List<Integer> sortedList = new ArrayList<>();
+        for (int i = range - 1; i >= 0; i--) {
+            if (countArray[i] == 1) {
+                sortedList.add(i + minValue);
+            }
+        }
 
         Map<Integer, Integer> rankMap = new HashMap<>();
         int rank = 1;
         for (int val : sortedList) {
-            rankMap.put(val, rank);
-            rank++;
+            rankMap.put(val, rank++);
         }
+
         return rankMap;
     }
 
