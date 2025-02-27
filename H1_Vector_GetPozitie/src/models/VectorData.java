@@ -35,8 +35,13 @@ public class VectorData {
     private void writeToFile(int pct, int result) {
         try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
                 new FileOutputStream("src/results.txt", true), StandardCharsets.UTF_8))) {
-            bw.write("Position of " + pct + ": " + result);
-            bw.newLine();
+            if (result == -1) {
+                bw.write("Invalid input!");
+                bw.newLine();
+            } else {
+                bw.write("Position of " + pct + ": " + result);
+                bw.newLine();
+            }
         } catch (IOException e) {
             throw new RuntimeException("Error writing to output file: " + e);
         }
