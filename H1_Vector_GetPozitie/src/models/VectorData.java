@@ -5,10 +5,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class VectorData {
-    private final List<Integer> punctaje;
-    private final Map<Integer, Integer> rankMap;
+    private Set<Integer> punctaje;
+    private Map<Integer, Integer> rankMap;
 
-    public VectorData(List<Integer> punctaje) {
+    public VectorData(Set<Integer> punctaje) {
         this.punctaje = punctaje;
         this.rankMap = computeRanks();
     }
@@ -20,9 +20,7 @@ public class VectorData {
         Map<Integer, Integer> rankMap = new HashMap<>();
         int rank = 1;
         for (int val : sortedList) {
-            if (!rankMap.containsKey(val)) {
-                rankMap.put(val, rank);
-            }
+            rankMap.put(val, rank);
             rank++;
         }
         return rankMap;
@@ -30,17 +28,14 @@ public class VectorData {
 
     public int getPozitie(int pct) {
         int position = rankMap.getOrDefault(pct, -1);
-        System.out.println(position);
-        writeToFile(position);
+        writeToFile(pct, position);
         return position;
     }
 
-    private void writeToFile(int result) {
-        try (FileOutputStream fos = new FileOutputStream("src/results.txt");
-             OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
-             BufferedWriter bw = new BufferedWriter(osw)
-        ) {
-            bw.write(result);
+    private void writeToFile(int pct, int result) {
+        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream("src/results.txt", true), StandardCharsets.UTF_8))) {
+            bw.write("Position of " + pct + ": " + result);
             bw.newLine();
         } catch (IOException e) {
             throw new RuntimeException("Error writing to output file: " + e);

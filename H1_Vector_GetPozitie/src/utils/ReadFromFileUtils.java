@@ -3,11 +3,14 @@ package utils;
 import models.VectorData;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ReadFromFileUtils {
-    public static List<VectorData> readFromFile(String filename) {
+    public static List<VectorData> readVectorsFromFile(String filename) {
         List<VectorData> vectors = new ArrayList<>();
 
         try (FileInputStream fis = new FileInputStream(filename);
@@ -19,7 +22,7 @@ public class ReadFromFileUtils {
                 if (line.trim().isEmpty()) {
                     continue;
                 }
-                List<Integer> vector = new ArrayList<>();
+                Set<Integer> vector = new HashSet<>();
                 String[] tokens = line.split(" ");
                 for (String token : tokens) {
                     vector.add(Integer.parseInt(token.trim()));
@@ -30,16 +33,16 @@ public class ReadFromFileUtils {
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Vector input file not found: " + e);
         } catch (IOException e) {
-            throw new RuntimeException("Error while reading from vectors file: " + e);
+            throw new RuntimeException("Error while reading from input file: " + e);
         }
 
         return vectors;
     }
 
-    public static List<int[]> readPositionsForSearch(String filename) {
+    public static List<int[]> readTestValuesAsArrays(String filename) {
         List<int[]> testValues = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename, StandardCharsets.UTF_8))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) {
