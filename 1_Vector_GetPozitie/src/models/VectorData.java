@@ -31,7 +31,6 @@ public class VectorData {
             return new HashMap<>();
         }
 
-        // Count sort
         int minValue = Collections.min(punctaje);
         int maxValue = Collections.max(punctaje);
 
