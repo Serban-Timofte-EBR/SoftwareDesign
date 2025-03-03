@@ -29,35 +29,30 @@ public class Doctor extends Person implements IMedicalRecord {
         return appointments;
     }
 
-
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Doctor{");
-        sb.append("idDoctor='").append(idDoctor).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Doctor{" + "idDoctor='" + idDoctor + '\'' + '}';
     }
 
     @Override
     public List<Appointment> getSelfAppointments(Hospital hospital) {
-        List<Appointment> hospitalAppointments = hospital.getHospitalAppointments();
-        return hospitalAppointments.stream().filter(appointment -> appointment.getDoctor().equals(idDoctor)).collect(Collectors.toList());
+        return hospital.getHospitalAppointments().stream()
+                .filter(appointment -> appointment.getDoctor().equals(this))
+                .collect(Collectors.toList());
     }
 
     @Override
     public String recordDiagnostic(String appointmentId, Date appointmentDate, String diagnosis, Hospital hospital) {
-        List<Appointment> selfAppointments = getSelfAppointments(hospital);
-
-        Optional<Appointment> appointmentOpt = selfAppointments.stream()
+        Optional<Appointment> appointmentOpt = getSelfAppointments(hospital).stream()
                 .filter(appointment -> appointment.getAppointmentId().equals(appointmentId))
                 .findFirst();
 
         if (appointmentOpt.isPresent()) {
             Appointment appointment = appointmentOpt.get();
             appointment.setDiagnosis(diagnosis);
-            return "Diagnosis recorded successfully.";
+            return "Diagnosticul a fost setat cu succes pentru pacientul " + appointment.getPatient().getName() + " pentru programarea cu ID " + appointment.getAppointmentId();
         } else {
-            return "Appointment not found.";
+            return "Programarea cu ID " + appointmentId + " nu a fost gasita in lista doctorului cu ID " + idDoctor;
         }
     }
 }
