@@ -57,6 +57,5 @@ class Main {
         System.out.println("Distribuția diagnosticelor: " + Hospital.getDiagnosesFrequency(spitalulDeUrgentaFloreasca));
         System.out.println("Tratamente administrate per asistentă: " + Hospital.getTreatmentsPerNurse(spitalulDeUrgentaFloreasca));
         System.out.println("Programări per pacient: " + Hospital.getAppointmentsPerPatient(spitalulDeUrgentaFloreasca));
-
     }
 }
