@@ -26,7 +26,7 @@
 
 3. YAGNI
 
-&emsp;&emsp; - Ypu aren't gonna need it
+&emsp;&emsp; - You aren't gonna need it
 
 &emsp;&emsp; - Definesti functii si metode inutile
 
@@ -104,4 +104,47 @@
 
 - Variabilele boolean trebuie sa aibe denumire care sa raspunda la intrebare cu true/fasle (isStudent, isTerminated)
 
-- In if statements folosim conditia pozitiva (depinde de context). PS: Folosin operatorul ternar
+- In if statements folosim conditia pozitiva (depinde de context). PS: Folosin operatorul ternar (cand nu avem multe conditii)
+
+- De obicei, un enum inseamna un design gresit (nu respecta O din SOLID)
+
+- Se recomanda folosirea lui this
+
+- Se recomanda iesirea din functie cat mai repede
+
+- Metodele trebuie sa respecta One Screen Rule
+
+## Complexitatea ciclomatica
+
+- N = Numarul de noduri (numarul de instructiuni)
+
+- E = Numarul de muchii 
+
+- Complex = N - E + 2
+
+```java
+a = 3; //node
+b = 4; //node
+aux = a; //node
+a = b; //node
+b = a; //node
+```
+
+- Aici avem O(1)
+
+```java
+a = 3; //node
+b = 4; //node
+if a > b {
+    max = a; //node
+} else {
+    max = b; //node
+}
+return max; //node
+```
+
+- Aici avem O(2)
+
+- Complexitatea ciclomatica indica numarul minim de instructiuni
+
+- Este recomandat sa folosim clasele Wrapper (pentru constante nu este recomandat)
