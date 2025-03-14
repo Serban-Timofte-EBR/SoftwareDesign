@@ -1,21 +1,26 @@
 package programe;
 
-import clase.Angajat;
-import clase.Utils;
+import clase.*;
 
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Angajat> listaAngajati;
-        try {
-            listaAngajati = Utils.readAngajati("angajati.txt");
-            for(Angajat angajat:listaAngajati)
-                System.out.println(angajat.toString());
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        AplicantReader<Student> studentReader = new StudentReader();
+        AplicantReader<Angajat> angajatReader = new AngajatReader();
+        AplicantReader<Elev> elevReader = new ElevReader();
+
+        List<Student> studenti = studentReader.readAplicants("studenti.txt");
+        List<Angajat> angajati = angajatReader.readAplicants("angajati.txt");
+        List<Elev> elevi = elevReader.readAplicants("elevi.txt");
+
+        System.out.println("Studenti:");
+        studenti.forEach(System.out::println);
+
+        System.out.println("Angajati:");
+        angajati.forEach(System.out::println);
+
+        System.out.println("Elevi:");
+        elevi.forEach(System.out::println);
     }
 }

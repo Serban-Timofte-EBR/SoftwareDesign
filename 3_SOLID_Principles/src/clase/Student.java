@@ -3,44 +3,32 @@ package clase;
 import java.util.Arrays;
 
 public class Student extends Aplicant {
-    protected String facultate;
-    protected int an_studii;
+    private String facultate;
+    private int anStudii;
 
-
-    public String getFacultate() {
-        return facultate;
-    }
-    public void setFacultate(String facultate) {
+    public Student(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumireProiect, String facultate, int anStudii) {
+        super(nume, prenume, varsta, punctaj, nrProiecte, denumireProiect);
         this.facultate = facultate;
-    }
-    public int getAn_studii() {
-        return an_studii;
-    }
-    public void setAn_studii(int an_studii) {
-        this.an_studii = an_studii;
+        this.anStudii = anStudii;
     }
 
-
-    public Student() {
-        super();
-
+    @Override
+    public int finantare() {
+        return 20;
     }
 
-    public Student(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect, String facultate, int an_studii) {
-        super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
-        this.facultate = facultate;
-        this.an_studii = an_studii;
-    }
     @Override
     public String toString() {
-        return "Student: Nume=" + nume + ", Prenume=" + prenume + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte +  ", DenumireProiect=" + Arrays.toString(denumireProiect) + "Facultate=" + facultate + ", An_studii=" + an_studii ;
+        final StringBuilder sb = new StringBuilder("Student{");
+        sb.append("facultate='").append(facultate).append('\'');
+        sb.append(", anStudii=").append(anStudii);
+        sb.append(", nume='").append(nume).append('\'');
+        sb.append(", prenume='").append(prenume).append('\'');
+        sb.append(", varsta=").append(varsta);
+        sb.append(", punctaj=").append(punctaj);
+        sb.append(", nrProiecte=").append(nrProiecte);
+        sb.append(", denumireProiect=").append(Arrays.toString(denumireProiect));
+        sb.append('}');
+        return sb.toString();
     }
-
-
-    public int finantare() {
-        int s=20;
-        System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-        return s;
-    }
-
 }
