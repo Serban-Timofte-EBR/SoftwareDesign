@@ -13,11 +13,6 @@ public class Student extends Aplicant {
     }
 
     @Override
-    public int finantare() {
-        return 20;
-    }
-
-    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Student{");
         sb.append("facultate='").append(facultate).append('\'');

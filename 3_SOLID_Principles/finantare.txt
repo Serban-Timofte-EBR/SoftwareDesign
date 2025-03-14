@@ -1,0 +1,4 @@
+Student=20
+Angajat=10
+Elev=30
+Freelancer=15

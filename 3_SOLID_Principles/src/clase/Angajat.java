@@ -13,11 +13,6 @@ public class Angajat extends Aplicant{
     }
 
     @Override
-    public int finantare() {
-        return 10;
-    }
-
-    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Angajat{");
         sb.append("ocupatie='").append(ocupatie).append('\'');

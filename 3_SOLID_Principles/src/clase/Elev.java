@@ -13,11 +13,6 @@ public class Elev extends Aplicant{
     }
 
     @Override
-    public int finantare() {
-        return 30;
-    }
-
-    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Elev{");
         sb.append("clasa=").append(clasa);

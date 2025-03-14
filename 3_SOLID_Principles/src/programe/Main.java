@@ -2,6 +2,7 @@ package programe;
 
 import clase.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -22,5 +23,18 @@ public class Main {
 
         System.out.println("Elevi:");
         elevi.forEach(System.out::println);
+
+        FinantareCalculator calculatorFinantare = new FinantareCalculator("finantare.txt");
+
+        List<Aplicant> aplicanti = new ArrayList<>();
+        aplicanti.addAll(studenti);
+        aplicanti.addAll(angajati);
+        aplicanti.addAll(elevi);
+
+        int bugetTotal = aplicanti.stream()
+                .mapToInt(calculatorFinantare::calculeazFinantarea)
+                .sum();
+
+        System.out.println("BugetTotal: " + bugetTotal);
     }
 }
