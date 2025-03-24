@@ -1,4 +1,4 @@
-package week4_SingletonRegistry.clase;
+package week4_SingletonRegistryLazy.clase;
 
 import java.util.*;
 

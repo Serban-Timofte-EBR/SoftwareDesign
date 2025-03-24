@@ -5,9 +5,9 @@
 - Bucatarii pregates preparate in cuptor (10 minute pentru pizza, etc.)
 - Fiind un unic cuptor se va face o lista de asteptare pentru preparatele bucatarilor
 
-## Continuare -> SingletonRegistry
+## Continuare -> SingletonRegistry V2
 
-- Se cumpara inca 3 cuptoare pentru eficienta
-- Cuptorul este ales in functie de timpul total pentru lista de asteptare
-- Cele 4 cuptoare exista de la inceputul programului (se poate cu bloc static). 
-- Cumptoarele sunt luate dupa id
+- Nu stim cate cuptoare avem de la inceput
+- Am 4 locuri pentru cuptor
+- Initial am doar un singur cuptor
+- Adaug treptat cate un cuptor in functie de contextul de business al restaurantului

@@ -1,7 +1,7 @@
-package week4_SingletonRegistry.program;
+package week4_SingletonRegistryLazy.program;
 
-import week4_SingletonRegistry.clase.Dish;
-import week4_SingletonRegistry.clase.Oven;
+import week4_SingletonRegistryLazy.clase.Dish;
+import week4_SingletonRegistryLazy.clase.Oven;
 
 public class Main {
     public static void main(String[] args) {
