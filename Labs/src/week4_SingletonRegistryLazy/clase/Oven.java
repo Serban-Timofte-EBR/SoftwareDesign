@@ -5,6 +5,7 @@ import java.util.*;
 public class Oven {
     private static final Map<Integer, Oven> registry = new HashMap<Integer, Oven>();
     private static int idNext = 0;
+    private static final int[] gradesFromFile = new int[] {100, 433, 212, 331};
 
     private int id;
     private List<Dish> preparationQueue;
@@ -16,26 +17,21 @@ public class Oven {
         this.maximumGrades = maximumGrades;
     }
 
-    public void setMaximumGrades(int maximumGrades) {
-        this.maximumGrades = maximumGrades;
+    public static void registryOven() {
+        if (idNext >= gradesFromFile.length) {
+            System.out.println("[FAILED]: You do not have enough space for this oven!");
+            return;
+        }
+        Oven oven = new Oven(gradesFromFile[idNext]);
+        registry.put(oven.id, oven);
     }
 
-    static {
-        // Simulare citire din fisier
-        int[] gradesFromFile = new int[] {100, 433, 212, 331};
-
-        for (int i = 0; i < 4; i++) {
-            Oven oven = new Oven(gradesFromFile[i]);
-            registry.put(oven.id, oven);
-        }
+    public static Map<Integer, Oven> getRegistry() {
+        return registry;
     }
 
     public static Oven getOvenById(int id) {
         return registry.get(id);
-    }
-
-    private Map<Integer, Oven> getRegistry() {
-        return registry;
     }
 
     public int calculateOvenWaitingTime() {

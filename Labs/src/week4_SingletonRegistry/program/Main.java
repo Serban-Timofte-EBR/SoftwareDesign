@@ -1,69 +1,46 @@
 package week4_SingletonRegistry.program;
 
-import week4_SingletonRegistry.clase.Dish;
-import week4_SingletonRegistry.clase.Oven;
+import week4_SingletonRegistryLazy.clase.Dish;
+import week4_SingletonRegistryLazy.clase.Oven;
 
 public class Main {
+    private static void tryAddDish(Dish dish) {
+        try {
+            Oven.addDish(dish);
+            System.out.println("[SUCCESS] " + dish.getName() + " assigned.");
+        } catch (RuntimeException e) {
+            System.out.println("[FAILED] " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("=========== INITIAL OVENS ===========");
-        for (int i = 0; i < 4; i++) {
-            System.out.println(Oven.getOvenById(i));
-        }
+        System.out.println("=========== INITIAL STATE ===========");
+        System.out.println("No ovens yet!");
 
-        Dish pizza = new Dish("Pizza", 25, 350);
-        Dish cake = new Dish("Cake", 40, 180);
-        Dish bread = new Dish("Bread", 30, 220);
-        Dish pie = new Dish("Pie", 20, 200);
-        Dish tart = new Dish("Tart", 35, 160);
-        Dish steak = new Dish("Steak", 50, 450);
+        Oven.registryOven();
+        System.out.println("[INFO]: Oven registered!");
 
+        tryAddDish(new Dish("Pizza", 25, 350));
+        tryAddDish(new Dish("Cake", 40, 90));
 
-        System.out.println("\n=========== ADDING DISHES ===========");
-        try {
-            Oven.addDish(pizza);
-            System.out.println("[SUCCESS]: Pizza assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
+        Oven.registryOven();
+        Oven.registryOven();
+        System.out.println("\n[INFO] Added Oven 2 and 3");
 
-        try {
-            Oven.addDish(cake);
-            System.out.println("[SUCCESS]: Cake assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
+        tryAddDish(new Dish("Bread", 30, 220));
+        tryAddDish(new Dish("Pie", 20, 200));
+        tryAddDish(new Dish("Tart", 35, 160));
+        tryAddDish(new Dish("Steak", 50, 450));
 
-        try {
-            Oven.addDish(bread);
-            System.out.println("[SUCCESS]: Bread assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
+        Oven.registryOven();
+        System.out.println("\n[INFO] Added Oven 4");
 
-        try {
-            Oven.addDish(pie);
-            System.out.println("[SUCCESS]: Pie assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
+        tryAddDish(new Dish("Steak", 50, 400));
 
-        try {
-            Oven.addDish(tart);
-            System.out.println("[SUCCESS]: Tart assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
+        System.out.println();
+        Oven.registryOven();
 
-        try {
-            Oven.addDish(steak); // Invalid Input
-            System.out.println("[SUCCESS]: Steak assigned.");
-        } catch (RuntimeException e) {
-            System.out.println("[FAILED]: " + e.getMessage());
-        }
-
-        System.out.println("\n=========== FINAL OVENS ===========");
-        for (int i = 0; i < 4; i++) {
-            System.out.println(Oven.getOvenById(i));
-        }
+        System.out.println("\n=========== FINAL STATE ===========");
+        Oven.getRegistry().values().forEach(System.out::println);
     }
 }
