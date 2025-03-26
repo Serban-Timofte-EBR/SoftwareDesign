@@ -21,4 +21,3 @@
 - Ambele fabrici sunt din fabrica finala
 
 - O paralela este ca o fabrica are mai multe linii de productie
-
