@@ -1,0 +1,9 @@
+În cadrul unei aplicații pentru o cafenea modernă, dorim să implementăm un sistem extensibil pentru prepararea băuturilor. Fiecare tip de băutură are o modalitate specifică de preparare, iar în viitor se vor adăuga tipuri noi.
+
+Se dorește implementarea unui sistem flexibil care să permită instanțierea acestor băuturi folosind patternul Factory Method, astfel încât să fie respectat principiul Open-Closed din SOLID (să nu modificăm codul existent la adăugarea unei noi băuturi).
+
+Sistemul trebuie să permită:
+	•	Definirea unei interfețe comune pentru băuturi (Bautura)
+	•	Definirea unei interfețe pentru fabrica (BauturaFactory)
+	•	Fiecare tip de băutură să aibă propria fabrică (EspressoFactory, LatteFactory, etc.)
+	•	Un client să poată comanda orice tip de băutură fără să cunoască detalii despre implementare.

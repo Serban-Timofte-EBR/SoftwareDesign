@@ -1,0 +1,25 @@
+În cadrul aplicației de rezervare și gestiune a unui hotel, se dorește implementarea unui modul de creare a camerelor de hotel.
+Fiecare cameră trebuie construită în mod controlat, având parametri personalizabili.
+
+Fiecare cameră are:
+	•	număr unic (obligatoriu)
+	•	tip cameră (Single, Double, Suite) – obligatoriu
+	•	număr paturi – default 1 pentru Single, 2 pentru Double, 1 King pentru Suite
+	•	prezență balconului (boolean) – opțional
+	•	set de facilități (opțional): minibar, seif, jacuzzi etc.
+
+🔒 Restricții de implementare:
+	1.	Nu se acceptă camere fără număr sau fără tipul specificat.
+	2.	Camerele nu pot fi modificate după creare (obiecte immutable).
+	3.	Dacă tipul camerei este Suite, atunci trebuie să aibă minim 2 facilități.
+	4.	Dacă se adaugă Jacuzzi, atunci balconul trebuie să fie prezent.
+	5.	Se va implementa o metodă afiseazaDetalii() care returnează toate datele camerei într-un format prietenos.
+	6.	Dacă se încalcă o regulă, se va arunca o excepție custom.
+
+⸻
+
+🎯 Testare:
+	•	Creează cel puțin 3 camere diferite: una Single, una Double și una Suite.
+	•	Pentru Suite, adaugă 2+ facilități.
+	•	Încearcă să creezi o cameră invalidă (Jacuzzi fără balcon) și prinde excepția.
+	•	Afișează toate camerele create cu afiseazaDetalii().

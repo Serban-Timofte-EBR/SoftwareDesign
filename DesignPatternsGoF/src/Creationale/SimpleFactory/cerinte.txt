@@ -1,0 +1,15 @@
+Un lanț de cafenele dorește să implementeze un sistem software care să gestioneze comenzi de băuturi. În funcție de tipul băuturii cerute de client (ESPRESSO, LATTE, CAPPUCCINO, ICED_COFFEE), sistemul trebuie să returneze un obiect corespunzător care implementează o interfață comună Bautura.
+
+Fiecare băutură:
+	•	are un nume,
+	•	un preț,
+	•	și o metodă prepara() care afișează mesajul „Se prepară [tip băutură]…”.
+
+Cerințe:
+	1.	Definește interfața Bautura și metodele comune.
+	2.	Creează clase concrete pentru fiecare tip de băutură (Espresso, Latte, Cappuccino, IcedCoffee) care implementează interfața.
+	3.	Implementează o clasă BauturaFactory
+	4. Creează un enum TipBautura pentru toate tipurile disponibile.
+    5. Simulează o comandă în clasa Main folosind BauturaFactory și apelează metoda prepara().
+
+
