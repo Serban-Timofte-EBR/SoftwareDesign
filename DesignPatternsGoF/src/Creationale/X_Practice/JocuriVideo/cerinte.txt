@@ -1,0 +1,20 @@
+Se dorește implementarea unui sistem pentru un joc video care implică trei tipuri de
+personaje: animale, vrăjitori și super-eroi. Fiecare personaj are o listă de mesaje vocale, iar poziția
+sa în joc este reprezentată de un obiect de tip Pozitie (cu atributele int x și int y). Toate personajele
+sunt înregistrate pe un Canvas de tip Context, implementat ca Singleton, care stochează toate
+instanțele de personaje din joc.
+Trebuie definită o interfață comună pentru toate personajele, care include următoarele metode:
+    • spuneCeva() -> Returnează aleator un mesaj din lista de mesaje vocale a personajului.
+    • verificaProximitate() -> Verifică dacă, în zona curentă a personajului, există cel puțin un
+alt personaj. Dacă se detectează un alt personaj, se preia un mesaj nou din lista acelui
+personaj, cu condiția ca mesajul respectiv să nu fie deja prezent în lista personajului
+curent. Această operație de împrumutare a mesajelor este permisă exclusiv pentru
+vrăjitori; animalele și super-eroii nu pot adopta mesaje din alte liste.
+    • getPozitie() -> Returnează poziția curentă a personajului, sub forma unui obiect de tip
+Pozitie.
+Procesul de creare a unui nou personaj este foarte consumator de resurse, deoarece presupune
+încărcarea inițială a listei de mesaje vocale din surse externe. În plus, vrăjitorii au o memorie
+colectivă: atunci când un vrăjitor învață o nouă frază, toate instanțele de vrăjitori trebuie să-și
+actualizeze lista de mesaje pentru a include acea frază.
+Există un obiect Context (de tip Canvas) implementat ca Singleton. Acest context stochează toate
+personajele din joc, facilitând accesul global și gestionarea pozițiilor acestora pe ecran.
