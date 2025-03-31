@@ -15,7 +15,7 @@ public class Magazin implements Cloneable{
         this.decoratiuni = new ArrayList<>();
     }
 
-    public Magazin(String denumire, float suprafata, int nrIntrari, TipPodea tipPodea, List<String> decoratiuni) {
+    public Magazin(String denumire, double suprafata, int nrIntrari, TipPodea tipPodea, List<String> decoratiuni) {
         this.denumire = denumire;
         this.suprafata = suprafata;
         this.nrIntrari = nrIntrari;

@@ -1,59 +1,66 @@
 package week5_Builder.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class MagazinBuilder implements Build{
-    private Magazin magazin;
-
-    // Campuri obligatorii
+public class MagazinBuilder implements Build {
     private String denumire = "";
     private double suprafata = -1;
-
-    public MagazinBuilder() {
-        this.magazin = new Magazin();
-    }
+    private int nrIntrari = 1;
+    private TipPodea tipPodea = TipPodea.MOCHETA;
+    private List<String> decoratiuni = new ArrayList<>();
 
     public MagazinBuilder setDenumire(String denumire) {
         this.denumire = denumire;
-        this.magazin.setDenumire(denumire);
         return this;
     }
 
     public MagazinBuilder setSuprafata(double suprafata) {
         this.suprafata = suprafata;
-        this.magazin.setSuprafata(suprafata);
         return this;
     }
 
     public MagazinBuilder setNrIntrari(int nrIntrari) {
-        this.magazin.setNrIntrari(nrIntrari);
+        this.nrIntrari = nrIntrari;
         return this;
     }
 
     public MagazinBuilder setTipPodea(TipPodea tipPodea) {
-        this.magazin.setTipPodea(tipPodea);
+        this.tipPodea = tipPodea;
         return this;
     }
 
     public MagazinBuilder setDecoratiuni(List<String> decoratiuni) {
-        this.magazin.setDecoratiuni(decoratiuni);
+        this.decoratiuni = new ArrayList<>(decoratiuni);
         return this;
     }
 
     @Override
     public Magazin build() {
-        if (this.denumire.isEmpty() || this.suprafata == -1) {
-            System.out.println("Magazinul nou nu se poate construit fara denumire, suprafata si numar intrari");
+        if (denumire.isEmpty() || suprafata <= 0) {
+            System.out.println("[ERROR]: Denumirea și suprafața sunt obligatorii.");
             return null;
         }
 
-        int nrMinIntrari = (int) Math.ceil(this.suprafata / 100);
-        if (this.magazin.getNrIntrari() < nrMinIntrari) {
-            System.out.println("Trebuie sa existe cel putin 1 intrare la 100mp");
+        int intrariMinime = (int) Math.ceil(suprafata / 100);
+        if (nrIntrari < intrariMinime) {
+            System.out.println("[ERROR]: Magazinul trebuie să aibă cel puțin 1 intrare la 100mp.");
             return null;
         }
-        Magazin buildedMagazin = this.magazin.clone();
-        this.magazin = new Magazin();
-        return buildedMagazin;
+
+        if (tipPodea.getDuritate() < 2 && decoratiuni.stream().anyMatch(d -> d.equalsIgnoreCase("sticla"))) {
+            System.out.println("[ERROR]: Podeaua moale nu permite decoratiuni din sticla.");
+            return null;
+        }
+
+        Magazin magazin = new Magazin(denumire, suprafata, nrIntrari, tipPodea, decoratiuni);
+
+        this.denumire = "";
+        this.suprafata = -1;
+        this.nrIntrari = 1;
+        this.tipPodea = TipPodea.MOCHETA;
+        this.decoratiuni = new ArrayList<>();
+
+        return magazin;
     }
 }
