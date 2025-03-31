@@ -6,10 +6,8 @@ import week5_Builder.models.TipPodea;
 
 public class Main {
     public static void main(String[] args) {
-        // Instanta Builder
         MagazinBuilder builder = new MagazinBuilder();
 
-        // Crearea de magazine
         System.out.println("===================== MAGAZINE CREATE PRIN BUILDER =====================");
         Magazin magazin = builder
                 .setDenumire("Emag Center")
@@ -42,6 +40,7 @@ public class Main {
                 .setNrIntrari(1)
                 .setTipPodea(TipPodea.LEMN_MASIV)
                 .build();
+
         // Testare unicitate magazine
         System.out.println("\n===================== MAGAZINE UNICE =====================");
         System.out.println(magazin);

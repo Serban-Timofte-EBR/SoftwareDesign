@@ -1,0 +1,14 @@
+- Pe modelul din poza merge Simple Facotry ca decid dupa acel pm2.5
+
+Factory Methiod Example
+
+                            Pizza (int blat)
+Produs (denumire, pret)
+                            Burger (String carne)
+
+- Aici facem (pentru SimpleFactory) un enum cu tipul de produs pe care il trimitem in Factory pentru a merge pe Pizza sau Burger, denumire si pret
+- Pentru Factory Method: Avem cate o fabrica de produse cu lactoza si fara lactoza
+
+PENTRU TEST:
+- Cerinta actuala vine Simple Factory
+- Se cere sa nu fie schimbari pe cod daca mai adaug un produs. Atunci fac o interfata Factory cu metoda createProduct si fiecare produs are o fabrica

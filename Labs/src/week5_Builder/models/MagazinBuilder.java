@@ -30,11 +30,6 @@ public class MagazinBuilder implements Build {
         return this;
     }
 
-    public MagazinBuilder setDecoratiuni(List<String> decoratiuni) {
-        this.decoratiuni = new ArrayList<>(decoratiuni);
-        return this;
-    }
-
     @Override
     public Magazin build() {
         if (denumire.isEmpty() || suprafata <= 0) {

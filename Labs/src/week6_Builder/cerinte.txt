@@ -1,0 +1,15 @@
+Un senzor de calitate a aerului oferă o plajă largă de măsurători în funcție de model precum:
+nivel PM 2.5, nivel PM10, nivel VOC, nivel CO2, nivel CO, temperatură, umiditate, etc. Clasa
+aferentă unui senzor este derivată din interfața AbstractAirQualitySensor. Aplicația permite
+crearea de senzori ce dispun de toate capabilitățile sau doar o parte din ele. Un senzor odată creat
+nu mai poate fi modificat.
+
+Constrangeri:
+    - Senzorul trebuie sa aiba temperatura
+
+În plus, se dorește ca procedeul de crearea a unui senzor să poată utiliza o singură linie de cod.  => Builder ca facem intr-o linie de cod si nu sunt mai multe tipuri de clase concrete (doar senzor)
+Implementați un design pattern ce rezolvă situația descrisă.
+Testați în main implementarea prin crearea a minim 3 senzori ce conțin diverse combinații de
+capabilități. Demonstrați faptul că fiecare dintre cei 3 senzori poate fi creat într-o singură linie de
+cod și că instrucțiunile de creare sunt independente (faptul că un senzor are o anumită
+capabilitate nu va influența capabilitățile senzorilor ce vor fi creați în viitor).
