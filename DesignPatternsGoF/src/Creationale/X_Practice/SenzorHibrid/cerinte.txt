@@ -1,0 +1,16 @@
+Un senzor de calitate a aerului inteligent va trimite în fiecare dimineață un raport privind calitateaaerului estimată pentru ziua respectivă.
+Clasa aferentă raportului implementează interfațaAbstractAirQualityReport. Tipul de raport este influențat de valoarea nivelului de particule fine(PM 2.5)
+estimată de modulul de machine learning extern senzorului (va proveni din exterior) astfel:dacă valoarea este cuprinsă în intervalul 0-30 se va genera un raport
+de aer curat; dacă valoarea estecuprinsă în intervalul 31-70 se va genera un raport de avertizare; dacă valoarea depășește 71 se vagenera un raport de risc asupra
+sănătății. Utilizați un design pattern ce permite crearea raportuluicorespunzător valorii PM 2.5 primită de senzor.
+
+Testați implementarea prin crearea a 3 rapoarte diferite pentru trei valori diferite ale PM 2.5primite de senzor (câte o valoare pentru fiecare interval)
+
+Un senzor de calitate a aerului oferă o plajă largă de masurători în funcție de model precum: nivelPM 2.5, nivel PM10, nivel VOC, nivel CO2, nivel CO, temperatură,
+umiditate, etc. Clasa aferentă unuisenzor este derivată din interfața AbstractAirQualitySensor. Aplicația permite crearea de senzorice dispun de toate capabilitățile
+sau doar o parte din ele. Un senzor odată creat nu mai poate fimodificat. În plus, se dorește ca procedeul de creare a unui senzor să poată utiliza o singură linie decod.
+Implementați un design pattern ce rezolvă situația descrisă
+
+Teestați în main implementarea prin crearea a minim 3 senzori ce conțin diverse combinații decapabilități.
+Demonstrați faptul că fiecare dintre cei 3 senzori poate fi creat într-o singură linie de codși că instrucțiunile de creare sunt independente
+(faptul că un senzor are o anumită capabilitate nu vainfluența capabilitățile senzorilor ce vor fi creați în viitor)
