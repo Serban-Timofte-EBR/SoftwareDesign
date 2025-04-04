@@ -1,0 +1,18 @@
+3p. Agenția deține o licență de turism unică ce trebuie imprimată pe toate documentele emise.
+Clasa aferentă licenței de turism trebuie să deriveze interfața AbstractTourismLicense.
+Metoda setLicenseNumber() trebuie să permită modificarea licenței o singură dată (orice viitor apel va arunca o excepție
+creată special în acest sens). Implementați un design pattern ce nu permite crearea mai multor licențe de turism simultan,
+ținând cont de faptul că aplicația este una multithreading.
+
+2p. Testați implementarea prin crearea a 3 referințe la clasa creată, din care una într-un threadsecundar.
+Demonstrați faptul că cele 3 variabile referă aceeași licență de turism
+
+Agenția de turism vinde pachete turistice formate din: transport (cu avionul sau cu autocarul),cazare
+(durată, tip cameră, stele hotel, etc.) și activități extra (excursii de grup, vizite muzee, etc.).
+Clasa aferentă unui pachet turistic este derivată din interfața AbstractHolidayPackage.
+Agențiadorește să creeze pachete turistice în orice combinație (doar cazare, doar transport, transport +cazare, etc.)
+și în plus să nu permită modificarea unui pachet turistic odată ce a fost creat.Implementați un design pattern ce rezolvă
+situația descrisă
+
+2p. Testați în main implementarea prin crearea a minim 3 pachete turistice ce conțin diversecombinații de servicii.
+Demonstrați faptul că un pachet odată ce a fost creat nu mai poate fi modificat.
