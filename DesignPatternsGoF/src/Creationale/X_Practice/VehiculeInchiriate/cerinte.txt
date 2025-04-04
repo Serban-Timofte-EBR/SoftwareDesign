@@ -1,0 +1,24 @@
+Context:
+Într-o aplicație de închiriere de vehicule (mașini, scutere, biciclete), fiecare vehicul are:
+	•	un număr unic de înmatriculare,
+	•	tipul vehiculului,
+	•	opțiuni disponibile (GPS, child seat, full insurance etc.).
+
+Clienții pot închiria vehicule personalizate cu opțiuni suplimentare.
+După ce vehiculul este rezervat, nu mai poate fi modificat.
+
+Cerința 1 (3 puncte)
+	•	Fiecare vehicul trebuie să fie creat cu toate informațiile într-un mod controlat și sigur (pentru a preveni vehicule incomplete sau invalide).
+	•	Vehiculele odată create trebuie să fie immutable – nu se mai pot modifica ulterior.
+
+Test:
+Creează 3 vehicule de tipuri diferite (mașină, scuter, bicicletă) cu opțiuni diferite.
+Demonstrează că vehiculele sunt construite corect și nu pot fi modificate după creare.
+
+Cerința 2 (2 puncte)
+	•	Aplicația permite gestionarea centralizată a vehiculelor disponibile printr-o registratură comună.
+	•	Această registratură trebuie să fie accesibilă din orice parte a aplicației și să fie unic instanțiată.
+
+Test:
+Simulează accesul la registru din două contexte (în Main și într-un alt Thread).
+Demonstrează că se referă la aceeași instanță.

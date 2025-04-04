@@ -1,0 +1,31 @@
+Context:
+Într-o aplicație de gestionare a comenzilor pentru o cafenea, fiecare comandă de cafea poate include:
+	•	Tipul de cafea (Espresso, Cappuccino, Latte etc.)
+	•	Tipul de lapte (normal, soia, migdale)
+	•	Opțiuni suplimentare (extra shot, sirop de vanilie, frișcă etc.)
+
+Crearea unei comenzi complete durează timp semnificativ, deoarece rețetele și combinațiile sunt preluate dintr-o bază de date complexă.
+
+⸻
+
+Cerința 1 (3p):
+	•	Se dorește optimizarea procesului de creare a comenzilor prin reutilizarea unor rețete de bază existente (fără a recrea de fiecare dată toate specificațiile de la zero).
+	•	Fiecare comandă poate fi personalizată ulterior cu opțiuni suplimentare, dar comenzile trebuie să fie independente (personalizarea unei comenzi să nu afecteze alta).
+
+Cerință concretă:
+	•	Implementați un design pattern care permite clonarea comenzilor existente, astfel încât să nu recreați procesul de inițializare dificil.
+	•	Asigurați-vă că fiecare comandă clonată poate fi modificată individual.
+
+Cerința 2 (2p):
+	•	Compania dorește să gestioneze diferite tipuri de cafele (Espresso, Latte, Cappuccino etc.) fără a avea cod dependent de clase concrete.
+	•	Fiecare tip de cafea trebuie să fie creat dinamic, în funcție de alegerea clientului.
+
+Cerință concretă:
+	•	Implementați un design pattern care să permită crearea cafelelor în funcție de tipul dorit, fără a folosi new Espresso(), new Latte() etc. în Main.
+	•	Codul să fie ușor de extins cu noi tipuri de cafele în viitor, fără modificări majore.
+
+⸻
+
+Test:
+	•	În Main, creați minim 3 tipuri diferite de cafea.
+	•	Evitați folosirea referințelor la clase concrete în metoda principală.
