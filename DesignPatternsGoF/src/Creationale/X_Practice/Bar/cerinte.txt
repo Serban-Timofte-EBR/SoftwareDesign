@@ -1,0 +1,25 @@
+🍹 Subiect Nou — Aplicație de Gestionare a Comenzilor la Bar
+Context:
+
+În cadrul unei aplicații de gestiune a comenzilor pentru un bar, se dorește implementarea unui modul de asignare a băuturilor ce trebuie preparate de către barmani. Fiecare băutură are:
+
+un timp estimat de preparare,
+
+o complexitate (scăzută, medie, ridicată).
+
+Inițial, în bar există un singur barman disponibil pentru a pregăti toate comenzile.
+
+3p. Să se implementeze modulul de gestionare al comenzilor astfel încât toate comenzile să fie plasate într-o listă de așteptare a barmanului unic.
+
+1p. Să se testeze soluția prin crearea a 4 băuturi și asignarea lor către barmanul existent.
+
+4p. Cu timpul, s-a constatat că un singur barman nu este suficient pentru fluxul de comenzi.
+Prin urmare, barul angajează încă 3 barmani suplimentari.
+Se dorește reorientarea implementării astfel încât:
+
+comenzile să fie distribuite către barmani astfel încât timpul total de așteptare să fie optimizat,
+
+să se țină cont de nivelul de complexitate al băuturii (anumite barmani pot pregăti doar băuturi de complexitate redusă/medie, iar alții și complexe).
+
+2p. Să se testeze soluția prin crearea a 5 băuturi cu niveluri diferite de complexitate și asignarea lor optimizată către barmanii existenți.
+Se va apela metoda de afișare a comenzilor aflate în așteptare pentru fiecare barman.
