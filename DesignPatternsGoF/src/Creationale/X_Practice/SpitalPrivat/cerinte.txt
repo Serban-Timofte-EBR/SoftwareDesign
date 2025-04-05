@@ -1,0 +1,30 @@
+În cadrul aplicației de gestiune a pacienților dintr-un spital privat, se dorește implementarea unui modul de înregistrare a pacienților și de gestionare a tratamentelor și contraindicațiilor medicale.
+
+Se cunoaște faptul că procesul de înregistrare a unui pacient nou este unul consumator de timp, întrucât, pentru fiecare pacient, trebuie încărcat:
+
+un set predefinit de tratamente recomandate în funcție de diagnosticul principal,
+
+și o listă de medicamente interzise (contraindicate în combinație cu tratamentele primite).
+
+Important: Dacă, pe parcursul spitalizării, se descoperă un medicament nou contraindicat (ex: efecte adverse descoperite la nivel internațional), atunci toți pacienții trebuie să fie informați și să își actualizeze lista de medicamente interzise imediat.
+
+În același timp, fiecare pacient își poate actualiza individual lista de tratamente în funcție de evoluția bolii sau de recomandarea medicului curant.
+
+Tipurile de pacienți pot fi: cardiaci, oncologici, post-operatorii, infecțioși etc.
+
+Cerința 1 (4p):
+Implementați un sistem de înregistrare a pacienților care optimizează timpul de creare pentru pacienții noi.
+
+Asigurați o actualizare globală a listei de medicamente contraindicate atunci când apare un medicament nou interzis.
+
+Permiteți actualizarea individuală a tratamentelor pentru fiecare pacient.
+
+Cerința 2 (3p):
+Testați soluția prin:
+
+Înregistrarea unui număr de minim trei pacienți de tipuri diferite (din care doi de același tip).
+
+Simularea procesului de adăugare a unui nou medicament contraindicat și verificarea actualizării la toți pacienții.
+
+Modificarea tratamentului pentru cel puțin un pacient.
+
