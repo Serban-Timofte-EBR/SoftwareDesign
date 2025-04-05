@@ -1,0 +1,35 @@
+Context (5p):
+O companie de închirieri de echipamente audio oferă clienților posibilitatea de a rezerva sisteme audio pentru diverse evenimente (petreceri, conferințe, concerte).
+Fiecare sistem audio poate include:
+
+Tip echipament: boxe, microfoane, mixere, amplificatoare.
+
+Număr de componente.
+
+Putere totală (Watt).
+
+Fiecare rezervare implică selectarea unui sistem audio personalizat, iar odată configurat, acesta nu mai poate fi modificat.
+Compania dorește să eficientizeze procesul de creare a sistemelor audio pentru clienți, pentru a evita rezervările incomplete sau eronate.
+
+Cerința 1 (3p)
+Fiecare sistem audio trebuie creat într-un mod controlat și sigur, astfel încât să nu existe sisteme incomplete sau invalide.
+
+Odată creat, un sistem audio trebuie să fie immutable (nu poate fi modificat).
+
+Clientul poate adăuga componente (boxe, microfoane, etc.) doar în momentul construirii sistemului.
+
+🔹 Test:
+Creează 3 sisteme audio cu combinații diferite de componente.
+Demonstrează că sistemele audio sunt create complet și nu mai pot fi modificate după finalizare.
+
+Cerința 2 (2p)
+Compania dorește să gestioneze toate sistemele disponibile printr-o registratură unică (un loc centralizat unde sunt stocate sistemele existente).
+
+Registratura trebuie să fie o instanță unică (accesibilă de oriunde în aplicație).
+
+La adăugarea unui sistem audio, acesta devine disponibil tuturor agenților de vânzări.
+
+🔹 Test:
+Creează o registratură globală a sistemelor audio.
+Simulează accesul la registru din Main și dintr-un alt Thread, demonstrând că referă aceeași instanță.
+
