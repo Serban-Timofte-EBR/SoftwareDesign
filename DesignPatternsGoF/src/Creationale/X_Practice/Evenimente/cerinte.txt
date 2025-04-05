@@ -1,0 +1,42 @@
+Context:
+O firmă de organizare de evenimente gestionează:
+
+săli de evenimente (dimensiuni diferite, capacități diferite),
+
+pachete de servicii (sonorizare, lumini, catering etc.),
+
+decoruri tematice.
+
+Crearea unui pachet complet pentru un eveniment este un proces complex, deoarece presupune:
+
+alegerea sălii potrivite,
+
+configurarea serviciilor,
+
+personalizarea decorului în funcție de tipul de eveniment (nuntă, conferință, petrecere aniversară etc.).
+
+Cerința 1 (3 puncte):
+Se dorește implementarea unui sistem care să permită:
+
+configurarea controlată a unui eveniment cu toate detaliile necesare (fără evenimente incomplete sau invalide),
+
+protejarea evenimentelor create (un eveniment odată construit nu mai poate fi modificat).
+
+Test:
+
+Creează 3 evenimente diferite (ex: o nuntă, o conferință, o petrecere aniversară).
+
+Afișează detaliile evenimentelor și demonstrează că acestea nu pot fi modificate după creare.
+
+Cerința 2 (2 puncte):
+Firma dorește să:
+
+gestioneze într-un mod centralizat toate sălile disponibile.
+
+asigure că există o singură instanță care controlează lista sălilor disponibile, accesibilă din orice loc din aplicație.
+
+➡️ Test:
+
+Accesează această listă de săli din două contexte diferite (ex: Main și un alt Thread).
+
+Demonstrează că este aceeași instanță.
