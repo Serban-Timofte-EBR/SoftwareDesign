@@ -1,0 +1,53 @@
+Context:
+Într-o aplicație de organizare a livrărilor, compania gestionează livrarea de produse prin mai multe tipuri de vehicule:
+
+Camioane (pentru livrări de volum mare),
+
+Furgonete (pentru livrări de volum mediu),
+
+Motociclete (pentru livrări rapide, pachete mici).
+
+Fiecare vehicul știe să calculeze timpul estimat de livrare în funcție de:
+
+tipul vehiculului,
+
+greutatea coletului,
+
+și distanța până la destinație.
+
+Cerința 1 (3p):
+Compania dorește ca alegerea tipului de vehicul pentru o livrare să se facă dinamic la execuție, în funcție de greutatea coletului:
+
+Dacă greutatea coletului > 100kg → se alocă Camion,
+
+Dacă greutatea coletului între 30kg și 100kg → se alocă Furgonetă,
+
+Dacă greutatea coletului < 30kg → se alocă Motocicletă.
+
+Important: aplicația NU trebuie să conțină în Main referințe directe la clasele concrete (ex: new Camion(), new Motocicleta(), etc).
+
+Implementare:
+Realizați un mecanism care permite crearea vehiculului potrivit fără a schimba codul existent dacă se adaugă noi tipuri de vehicule pe viitor.
+
+✅ Să se testeze în Main:
+
+creați minim 4 livrări cu greutăți diferite,
+
+afișați ce vehicul a fost ales și timpul estimat de livrare pentru fiecare.
+
+Cerința 2 (2p):
+Compania vrea să gestioneze toate livrările într-un registru unic.
+
+Registrul:
+
+trebuie să fie accesibil din orice parte a aplicației,
+
+trebuie să existe o singură instanță de registru indiferent câte fire de execuție există.
+
+Testare:
+
+salvați câteva livrări în registru din Main,
+
+salvați o livrare dintr-un Thread separat,
+
+demonstrați că toate livrările apar în același registru.

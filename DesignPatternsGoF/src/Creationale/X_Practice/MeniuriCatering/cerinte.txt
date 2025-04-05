@@ -1,0 +1,41 @@
+Compania ta de catering oferă 3 tipuri de meniuri pentru evenimente:
+
+Meniu Standard
+
+Meniu Vegetarian
+
+Meniu Premium
+
+Fiecare meniu conține:
+
+o listă de feluri principale,
+
+o listă de deserturi,
+
+și băuturi incluse.
+
+În funcție de numărul de persoane și de preferințele clientului, sistemul trebuie să aleagă un tip de meniu potrivit și să calculeze timpul total de pregătire.
+
+Cerința 1 (3 puncte):
+Se dorește ca alegerea meniului să fie făcută automat în funcție de preferința clientului, fără a utiliza referințe către clase concrete în Main.
+
+Creează o arhitectură bazată pe un design pattern care permite instanțierea dinamică a meniurilor.
+
+Fiecare meniu trebuie să implementeze o interfață Meniu.
+
+Fiecare tip de meniu trebuie să aibă o formulă proprie de calcul al timpului de pregătire.
+
+Test:
+În Main, creează 3 comenzi pentru evenimente diferite folosind meniuri diferite, fără să folosești new MeniuStandard() sau alte clase concrete în Main.
+
+Cerința 2 (2 puncte):
+Sistemul de gestionare a comenzilor trebuie să fie centralizat, adică:
+
+Există un RegistruComenzi unic (Singleton) care păstrează toate comenzile înregistrate.
+
+Registrul trebuie să fie accesibil din orice parte a aplicației, inclusiv din thread-uri secundare.
+
+Test:
+Creează două comenzi în Main și una într-un Thread.
+
+Demonstrează că toate comenzile sunt salvate în același RegistruComenzi.
