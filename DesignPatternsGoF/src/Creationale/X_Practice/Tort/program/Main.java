@@ -17,7 +17,9 @@ public class Main {
         System.out.println(cake2);
 
         CakeBuilder builderFromPrototype = CakePrototypeFactory.getCakeTemplate(CakeType.TORT_NUNTA);
-        Cake cake3 = cakeBuilder.build();
+        Cake cake3 = builderFromPrototype
+                .addDecoration("Bombonela stralucitoare")
+                .build();
         System.out.println(cake3);
     }
 }

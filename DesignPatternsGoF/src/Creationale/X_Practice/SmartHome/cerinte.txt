@@ -1,0 +1,51 @@
+Într-o aplicație de configurare Smart Home, utilizatorii pot crea dispozitive inteligente personalizate.
+Fiecare dispozitiv are următoarele caracteristici:
+
+Tip dispozitiv (ex: Termostat, Cameră de supraveghere, Asistent vocal),
+
+Protocol de conectare (WiFi, Bluetooth, Zigbee),
+
+Număr de senzori integrați,
+
+Funcționalități suplimentare (opțional: detecție mișcare, control vocal, recunoaștere facială).
+
+Cerința 1 (3 puncte)
+Se dorește o metodă de creare a dispozitivelor astfel încât:
+
+utilizatorul să construiască pas cu pas un dispozitiv,
+
+să nu existe dispozitive incomplete (ex: fără tip sau protocol),
+
+să fie posibilă personalizarea ușoară a senzorilor și funcționalităților.
+
+Odată ce un dispozitiv a fost creat, nu mai poate fi modificat.
+
+Test pentru Cerința 1:
+În Main:
+
+Creează 3 dispozitive:
+
+Un Termostat cu protocol WiFi și 2 senzori integrați (temperatură + umiditate),
+
+O Cameră de supraveghere cu protocol Zigbee și funcționalitate suplimentară de detecție mișcare,
+
+Un Asistent vocal cu protocol Bluetooth și funcționalitate suplimentară de control vocal.
+
+Afișează datele fiecărui dispozitiv construit.
+
+Cerința 2 (2 puncte)
+După testarea mai multor combinații, compania decide să ofere configurații standard pentru utilizatorii grăbiți.
+
+Se dorește o metodă prin care:
+
+să existe câteva dispozitive standard gata configurate (ex: "Pachet Basic", "Pachet Premium"),
+
+să poată fi create dispozitive noi pornind de la aceste modele, dar să fie independente (modificările pe dispozitivul nou să nu afecteze pachetul original).
+
+Test pentru Cerința 2:
+Creează două modele standard: Pachet Basic (Termostat simplu) și Pachet Premium (Cameră cu recunoaștere facială și control vocal).
+
+Creează un dispozitiv nou pornind de la Pachet Premium, adăugând un senzor suplimentar de umiditate.
+
+Afișează modelul original și dispozitivul personalizat pentru a demonstra că sunt independente.
+
