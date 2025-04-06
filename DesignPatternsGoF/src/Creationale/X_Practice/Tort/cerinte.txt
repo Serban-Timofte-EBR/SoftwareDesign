@@ -1,0 +1,61 @@
+Context:
+Într-o cofetărie premium, clienții pot comanda torturi personalizate.
+Fiecare tort are următoarele caracteristici:
+
+Dimensiune (mic, mediu, mare),
+
+Aromă principală (ciocolată, vanilie, fructe),
+
+Glazură (ciocolată, caramel, frișcă),
+
+Decoruri suplimentare (opționale, listă de elemente ex: fructe, figurine, fulgi de ciocolată).
+
+Torturile trebuie create astfel încât:
+
+să nu existe torturi cu atribute lipsă sau invalide,
+
+clientul să poată personaliza doar anumite elemente (ex: să adauge decor suplimentar sau să schimbe glazura),
+
+construcția tortului trebuie să fie controlată pas cu pas.
+
+După ce un tort este creat, nu mai poate fi modificat.
+
+Cerința 1 (3 puncte)
+Se dorește o metodă de construire a torturilor astfel încât:
+
+să fie evitată crearea de torturi invalide,
+
+să fie posibilă personalizarea decorului și a altor elemente,
+
+să existe o modalitate de construire pas cu pas, controlată și sigură.
+
+Test pentru Cerința 1:
+În Main:
+
+Creează 3 torturi diferite:
+
+Un tort mare cu aromă de ciocolată și fructe ca decor,
+
+Un tort mediu cu aromă de vanilie și figurine personalizate,
+
+Un tort mic cu aromă de fructe fără decor suplimentar.
+
+Afișează detaliile fiecărui tort creat pentru a demonstra construcția corectă.
+
+Cerința 2 (2 puncte)
+În urma creșterii comenzilor, cofetăria observă că durează mult să creeze de la zero fiecare tort.
+
+Se dorește o soluție prin care:
+
+să existe rețete standard de torturi (ex: "Tort Aniversar", "Tort Nuntă"),
+
+să se poată crea rapid un nou tort pornind de la un model existent,
+
+modificările făcute pe un tort nou să nu afecteze modelul standard.
+
+Test pentru Cerința 2:
+Definiți două modele de tort standard: "Tort Aniversar" și "Tort Nuntă".
+
+Creați un nou tort prin copierea modelului "Tort Aniversar" și adăugați un decor suplimentar nou pentru un client.
+
+Afișați modelul original și tortul personalizat pentru a demonstra că sunt independente.

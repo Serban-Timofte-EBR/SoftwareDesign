@@ -1,0 +1,57 @@
+O companie de transport urban dezvoltă o aplicație pentru gestionarea vehiculelor disponibile pentru curse:
+
+Autobuze
+
+Troleibuze
+
+Tramvaie
+
+Fiecare vehicul are:
+
+un cod unic (număr de identificare),
+
+un tip de vehicul (autobuz, troleibuz, tramvai),
+
+o capacitate de locuri.
+
+Vehiculele trebuie să fie gestionate eficient pentru alocarea curselor către șoferi.
+
+Cerința 1 (3p):
+Crearea vehiculelor trebuie să fie controlată și sigură, astfel încât:
+
+să nu existe vehicule create incomplet (fără cod sau capacitate),
+
+vehiculele odată create să fie immutable (nu pot fi modificate după creare).
+
+✅ Hint: se recomandă utilizarea unui Builder Pattern.
+
+Test cerința 1:
+Creează 3 vehicule (un autobuz, un troleibuz și un tramvai) cu informațiile necesare.
+
+Afișează-le în Main.
+
+Încearcă să modifici ulterior un vehicul (trebuie să nu fie posibil din design).
+
+Cerința 2 (2p):
+Gestionarea centralizată a vehiculelor disponibile:
+
+Vehiculele create trebuie înregistrate într-un registru unic, vizibil în toată aplicația.
+
+Registrul trebuie să fie unic (Singleton) și să ofere operații de tip:
+
+addVehicul(Vehicul vehicul)
+
+listVehicule()
+
+✅ Hint: se recomandă utilizarea unui Singleton Pattern pentru registru.
+
+Test cerința 2:
+În Main, adaugă vehiculele create în registru.
+
+Accesează registrul și listează vehiculele din două contexte diferite:
+
+din Main,
+
+dintr-un Thread secundar.
+
+✅ Demonstrează că se folosește aceeași instanță de registru.
