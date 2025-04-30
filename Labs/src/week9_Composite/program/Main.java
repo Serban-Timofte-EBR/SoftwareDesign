@@ -10,14 +10,14 @@ public class Main {
         INod cutie1 = new NodStructura(10);
         INod cutie2 = new NodStructura(15);
         INod colet1 = new Colet(20, false);
-        INod colet2 = new Colet(8, false);
+        INod colet2 = new Colet(8, true);
 
         container.addNod(cutie1);
         container.addNod(cutie2);
         cutie1.addNod(colet1);
         cutie1.addNod(colet2);
 
-//        System.out.println(container.esteFragil());
+        System.out.println(container.esteFragil());
         System.out.println("Greutate Container: " + container.getGreutate());
     }
 }

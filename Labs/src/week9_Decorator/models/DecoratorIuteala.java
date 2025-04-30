@@ -1,6 +1,6 @@
 package week9_Decorator.models;
 
-public class DecoratorIuteala extends ADecorator {
+public class DecoratorIuteala extends ADecorator{
     private int nivelIuteala;
 
     public DecoratorIuteala(IPizza pizza, int nivelIuteala) {
@@ -10,11 +10,11 @@ public class DecoratorIuteala extends ADecorator {
 
     @Override
     public String getListaIngrediente() {
-        return super.getListaIngrediente() + ", Iuteala de nivel: " + nivelIuteala;
+        return super.getListaIngrediente() + ", Uiteala de nivel: " + this.nivelIuteala;
     }
 
     @Override
     public double getPret() {
-        return super.getPret() + 5.3;
+        return super.getPret() + 5.5;
     }
 }
