@@ -1,0 +1,28 @@
+5p. În cadrul unui magazin online de pantofi, se doreste implementarea unui modul de filtrare a
+produselor in functie de criteriile de selectie adaugate de client (interfata ICautare).
+Implementare trebuie sa permita in timp extinderea modulului prin adaugarea de noi criterii de
+selectie. De asemenea, trebuie sa existe posibilitatea de rearanjare a ordinii de aplicare a
+criteriilor. Daca un client nu parametrizeaza un anume criteriu de selectie, atunci nu se va tine
+cont de acesta. Ordinea criteriilor de selectie se stabileste la nivel de magazin, nu la nivel de
+fiecare client in parte. Insa, clientul poate parametriza cautarea prin alegerea sau nu a unui
+criteriu de a fi adaugat.
+
+3p. Pattern-ul este testat în main() prin adaugarea unui numar de minim 7 produse in cadrul
+magazinului. Ulterior, se aplica minim 2 cautari in cadrul magazinului si se afiseaza rezultatul
+furnizat de cautari.
+
+1p. Sa se motiveze in scris alegerea design pattern-ului care modeleaza cel mai bine situatia enuntata.
+Motivarea trebuie sa contina elementele cheie care denota utilizarea respectivului design
+pattern.
+
+5p. Se doreste implementarea unui modul suplimentar care sa permita clientului sa aleaga intre
+generarea unei parametrizari implicite de cautare de produse sau optiunea de a-si seta singur
+parametrii de cautare. Parametrizarea clientului se va realiza folosind citirea de la tastatura. Se
+utilizeaza interfata IClient si ICautare.
+
+3p. Pattern-ul este testat în main() prin utilizarea unui client si setarea la nivelul sau a celor doua
+optiuni de parametrizare a unei cautari.
+
+1p. Sa se motiveze in scris alegerea design pattern-ului care modeleaza cel mai bine situatia enuntata.
+Motivarea trebuie sa contina elementele cheie care denota utilizarea respectivului design
+pattern.
