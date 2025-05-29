@@ -240,3 +240,35 @@ public class NotificationManager {
 ```
 
 - NotificationManager depinde direct de o clasă concretă (EmailService) și este greu de reutilizat/testat.
+
+## Complexitatea Ciclomatica (CC)
+
+> Complexitatea Ciclomatica = Numarul de muchii - Numarul de noduri + 2
+
+- Metodele simple au complexitatea 1 (fara if - else, switch)
+
+```java
+int a;  // nod 1
+// prima muchie
+a = 5; // nod 2
+// a doua muchie
+a++ // nod 3
+```
+
+- CC = 2 - 3 + 2 = 1
+
+```java
+if (x<5) {  // nod 1
+    // prima muchie
+    y++;    // nod  2
+} else {
+    // a doua muchie
+    y--;    // nod 3
+}
+// a treia + a patra muchie (vine o muchie de pe if si una de pe else)
+System.out.println(y); // nod 4
+```
+
+- CC = 4 - 4 + 2 = 2
+
+- CC spune numarul minim de teste unitare care trebuie efectuate pentru verificarea unei functii
