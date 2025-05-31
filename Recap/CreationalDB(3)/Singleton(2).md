@@ -527,4 +527,4 @@ public class Program {
 
 ---
 
-[Back](0_IntroducereainDesignPatterns(1))
+[Back](0_IntroducereainDesignPatterns(1).md)
