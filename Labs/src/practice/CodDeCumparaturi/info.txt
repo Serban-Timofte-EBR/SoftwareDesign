@@ -1,0 +1,14 @@
+În cadrul unui magazin online, calculul totalului de plata pentru cosul de cumparaturi al unui client
+inclusiv transportul se realizeaza la sfarsit, in functie de totalul cosului de cumparaturi si de
+adresa clientului. Implementarea este disponibila in clasa Magazin. Ca o masura de promovare a
+magazinului, departamentul de market doreste adaugarea unei noi optiuni de discount de 10%
+aplicat doar o singura data la intreaga prima comanda pentru fiecare client in parte. Aceasta
+optiune nu trebuie sa implice modificari in codul existent. Sa se implementeze un modul
+intermediar care sa gestioneze noul context
+
+Se doreste implementarea unui modul care sa ofere posibilitatea clientilor de a vizualiza produse
+din cadrul magazinului online intr-o maniera arborescenta. Se definesc minim doua niveluri de
+agregare a produselor (categorii, subcategorii, etc). Implementarea va tine cont de interfata
+IProdus. La vizualizarea produselor, la nivel de categorii se afiseaza denumirea precum si numarul
+total de produse din respectiva categorie iar la nivel de produs, denumirea si numarul de bucati
+existente in stoc.
