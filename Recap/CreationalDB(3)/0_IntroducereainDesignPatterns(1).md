@@ -39,7 +39,7 @@
 
 - [Factory Method](FactoryMethod(4).md)
 
-- [Abstract Factory](FactoryAbstract.md)
+- [Abstract Factory](FactoryAbstract(5).md)
 
 - [Prototype](Prototype(6).md)
 
