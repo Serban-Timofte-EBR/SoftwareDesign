@@ -110,3 +110,7 @@ public class Program {
 - Este similar cu o fabrica care are mai multe linii de productie
 
 ![alt text](../img/FabricaPacheteAgeTur-FactoryMethod.png)
+
+---
+
+- [Back](0_Introducerea in Design Patterns(1).md)

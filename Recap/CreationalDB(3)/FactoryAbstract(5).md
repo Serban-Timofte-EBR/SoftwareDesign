@@ -97,3 +97,7 @@ public class Program {
 - Creeaza combinatii de tipuri de cazare si transport in functie de cum cere implementarea
 
 - Fiecare fabrica imi creeaza o combinatie de cazare si de transport
+
+---
+
+- [Back](0_Introducerea in Design Patterns(1).md)

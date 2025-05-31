@@ -524,3 +524,7 @@ public class Program {
 - Conexiunea unica la baza de date
 
 - Accesarea resurselor dispozitivelor mobile (SharedPreferences în Android)
+
+---
+
+- [Back](0_Introducerea in Design Patterns(1).md)

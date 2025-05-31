@@ -164,3 +164,7 @@ public class Program {
 - Crearea de view-uri in GUI
 
 - Existenta unei familii de obiecte intr-o aplicatie
+
+---
+
+- [Back](0_Introducerea in Design Patterns(1).md)

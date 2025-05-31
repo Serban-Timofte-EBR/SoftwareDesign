@@ -30,3 +30,21 @@
   - Cine creaza obiectul?
   - Cum este creat?
   - Cand este creat?
+
+## Design Patterns Creationale
+
+- [Singleton](Singleton(2).md)
+
+- [Simple Factory](Factory(3).md)
+
+- [Factory Method](FactoryMethod(4).md)
+
+- [Abstract Factory](FactoryAbstract.md)
+
+- [Prototype](Prototype(6).md)
+
+- [Builder](Builder(7).md)
+
+---
+
+- [Back](../../README.md)
