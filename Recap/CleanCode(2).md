@@ -272,3 +272,7 @@ System.out.println(y); // nod 4
 - CC = 4 - 4 + 2 = 2
 
 - CC spune numarul minim de teste unitare care trebuie efectuate pentru verificarea unei functii
+
+---
+
+[Back](../README.md)

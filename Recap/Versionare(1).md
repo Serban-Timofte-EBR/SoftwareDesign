@@ -140,3 +140,7 @@ git merge <<branch_with_updates>>
 ```
 
 - Aplica modificarile existente in branch-ul din comanda pe baza branchului curent
+
+---
+
+[Back](../README.md)

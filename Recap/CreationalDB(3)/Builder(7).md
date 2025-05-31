@@ -208,4 +208,4 @@ public class PachetTransportBuilder implements Builder {
 
 ---
 
-- [Back](0_Introducerea in Design Patterns(1).md)
+[Back](0_Introducerea in Design Patterns(1).md)
