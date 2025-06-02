@@ -147,3 +147,13 @@ public class Facade {
   - Rezervarea unui hotel
 
 - Evitam astfel ca noi in Main sa apelam toate functiile din spatele procesului de rezervare
+
+### Utilizari
+
+- Folosit pentru implementari ale framework-urilor open-source
+
+- De regula, fatada este Singleton - instanta unica
+
+---
+
+[Back](<0_IntroducereainDesignPatternsStructurale(1).md>)
