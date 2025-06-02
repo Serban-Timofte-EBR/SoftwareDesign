@@ -237,3 +237,7 @@ public class Program {
 - Optionalele sunt specifice pentru fiecare individ in parte
 
 - Registry-ul sub forma de factory cuprinde obiectele partajabile intre mai multe instante (persoane in cazul nostru)
+
+---
+
+[Back](<0_IntroducereainDesignPatternsStructurale(1).md>)

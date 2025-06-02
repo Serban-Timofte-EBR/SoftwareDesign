@@ -204,3 +204,7 @@ public class Program {
 - Organizarea studentilor in serii si grupe
 
 - Pentru a reprezenta orice structura aborescenta
+
+---
+
+[Back](<0_IntroducereainDesignPatternsStructurale(1).md>)
