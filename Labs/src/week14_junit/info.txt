@@ -1,0 +1,31 @@
+- Orice test unitar este marcat de adnotarea JUnit
+- Ca sa rulam trebuie sa avem minim o adnotare @Test
+
+- SetUp pregatim obiectele pentru test. Este primul care este rulat. Ex: preluam teste din fisiere
+    - Se apeleaza mereu inainte de o metoda adnotata cu @Test
+
+- TearDown elibereaza resursele. Pentru reset valori. Ex: Inchizi o conexiune special pentru asta
+    - Se apeleaza mereu inainte de o metoda adnotata cu @Test
+
+- @BeforeClass
+    - Se apeleaza o singura data la inceput
+    - Deschidem o conexiune la DB
+
+- @AfterClass
+    - Apelat o singura data la sfarsit
+
+- Testare Boundry -> testarea limitelor
+    - Adica testam limitele care NU sunt aruncatoare de exceptii
+    - Boundry este o testare RIGHT la valoarea limita
+
+JAVA Code:
+
+@RunWith(Categories.class)  // IMPORTANT: Aici merge doar cu Categories. Daca folosim SUITE ruleaza clasele de test
+@Categories.IncludeCategory({TestRBICEP.class}) // Se uita si la clasele care deriveaza clasa de aici
+@Suite.SuiteClasses({ConstructorMasinaTest.class, MasinaTest.class})
+public class SuitaPartialaIncludeRight {
+
+}
+
+- Se uita la categoriile TestRBICEP in suita selectata
+- Atentie!!!! Nu merge sa punem clasele de teste la IncludeCategory

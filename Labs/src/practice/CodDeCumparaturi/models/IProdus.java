@@ -8,5 +8,5 @@ public interface IProdus {
     void stergeProdus(IProdus produs);
     void getProdus(IProdus produs);
 
-    void afisare(int nivelIndentare)
+    void afisare(int nivelIndentare);
 }
