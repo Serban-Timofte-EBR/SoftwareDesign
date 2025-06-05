@@ -96,3 +96,50 @@ public int getVarsta() {
 ## Mock
 
 - Diferit de toate celelalte, dar functioneaza similar
+
+- Prin utilizarea Mockito / EasyMock
+
+### Mock Testing
+
+- Este utilizat atunci cand dorim ca metoda testata sa NU fie influentata de referintele externe
+
+- **Mock Object** = Un obiect care simuleaza comportamentul unui obiect real, insa intr-un mod controlat
+
+### Mockito
+
+- [JAR Repo](https://mvnrepository.com/artifact/org.mockito/mockito-all/1.10.19)
+
+1. Se creeaza un obiect mock pe baza unei clase reale
+
+```java
+Persoana sot = mock(Persoana.class)
+```
+
+2. Se seteaza comportamentul pentru metodele dorite:
+
+```java
+when(sot.getVarsta()).thenReturn(23);
+doReturn(3).when(sot).getVarsta();
+```
+
+- Metode Mockito:
+  - doReturn()
+  - doAnswer()
+  - when()
+  - thenReturn()
+  - thenAnswer()
+  - thenThrow()
+  - doThrow()
+  - doCallRealMethod()
+
+3. Exemplu test Mockito
+
+```java
+@Test
+public void test_verificareLegalitate_mockito() {
+    Persoana p = mock(Persoana.class);
+    when(p.getVarsta()).thenReturn(21);
+    Companie c = new Companie("Companie", p, 1000);
+    assertTrue(c.verificareLegalitate());
+}
+```
