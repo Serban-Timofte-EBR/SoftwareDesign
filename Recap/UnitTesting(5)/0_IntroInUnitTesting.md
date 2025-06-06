@@ -94,3 +94,19 @@ tearDownAfterClass()
 | @AfterClass  | metoda tearDownAfterClass() |
 | @Before      | metoda seUp()               |
 | @After       | metoda tearDown()           |
+
+## Principiile si tehnici de testare unitara
+
+- [Right-BICEP](<./Right-BICEP(1).md>)
+
+- [Correct](<./Correct(2).md>)
+
+- [First](<./First(3).md>)
+
+- [Mocks](<./Mocks(4).md>)
+
+- [Suite](./Suite.md)
+
+---
+
+[Back](../../README.md)

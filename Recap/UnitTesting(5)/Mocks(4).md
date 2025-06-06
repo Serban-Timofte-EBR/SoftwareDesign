@@ -143,3 +143,7 @@ public void test_verificareLegalitate_mockito() {
     assertTrue(c.verificareLegalitate());
 }
 ```
+
+---
+
+[Back](0_IntroInUnitTesting.md)

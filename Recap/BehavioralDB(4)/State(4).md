@@ -157,3 +157,7 @@ public class Program {
 - Starile rezervarilor sau a comenzilor in orice aplicatie
 
 - Evitam utilizarea switch / if-else
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

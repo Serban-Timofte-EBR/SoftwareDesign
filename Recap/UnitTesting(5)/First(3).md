@@ -49,3 +49,7 @@
 ## Tst Coverage
 
 - Procentul de cod care este acoperit de teste
+
+---
+
+[Back](0_IntroInUnitTesting.md)

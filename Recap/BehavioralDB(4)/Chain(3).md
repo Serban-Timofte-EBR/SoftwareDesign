@@ -183,3 +183,7 @@ public class Program {
 ## Utilizari
 
 - DNS Resolver
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

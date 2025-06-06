@@ -162,3 +162,7 @@ public class ManagerPacheteTuritice {
 - Salvarea fisierelor
 
 - Realizarea de backupuri
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

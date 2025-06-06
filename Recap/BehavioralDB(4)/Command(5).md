@@ -224,3 +224,7 @@ public class Program {
 - Lucrul cu fisiere
 
 - Oriunde se doreste revenirea la o stare anterioare prin intermediul comenzilor
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

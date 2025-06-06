@@ -133,3 +133,7 @@ public class Agentie implements Subject {
 ## Utilizari
 
 - In arhitectura MVC (Model - View - Controller)
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

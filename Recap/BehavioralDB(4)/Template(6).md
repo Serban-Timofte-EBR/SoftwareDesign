@@ -202,3 +202,7 @@ public class Program {
 ## Utilizari
 
 - Atunci cand modul de procesare sau de rezolvare a unei probleme urmeaza un numar finit de pasi
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

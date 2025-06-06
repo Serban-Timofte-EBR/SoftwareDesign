@@ -91,11 +91,11 @@ public class Client {
 
  private String nume;
  private ModPlata modPlata;
- 
+
  public void plateste(double sumaDePlata){
   modPlata.plateste(this.nume, sumaDePlata);
  }
- 
+
  public String getNume() {
   return nume;
  }
@@ -108,20 +108,20 @@ public class Client {
  public void setModPlata(ModPlata modPlata) {
   this.modPlata = modPlata;
  }
- 
+
  public Client(String nume, ModPlata modPlata) {
   super();
   this.nume = nume;
   this.modPlata = modPlata;
  }
 
- 
+
  public Client(String nume) {
   super();
   this.nume = nume;
   this.modPlata = new Cash();
  }
- 
+
 }
 ```
 
@@ -140,10 +140,10 @@ public class Program {
 
  public static void main(String[] args) {
   Client client=new Client("Popescu");
-  
+
   client.setModPlata(new Card());
   client.plateste(300);
-  
+
   client.setModPlata(new Cash());
   client.plateste(100);
  }
@@ -162,3 +162,7 @@ public class Program {
 - Furnizarea de comportamente pentru metodele de sortare - Transmitem catre functia sort tipul - quick sort, bubble sort, merge sort, etc
 
 - Utilizarea validatoarelor pentru anumite controale
+
+---
+
+[Back](0_IntroinDesignPatternsComportamentale.md)

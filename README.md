@@ -19,4 +19,8 @@
    - [Link here](<./Recap/StructuralDB(4)/0_IntroducereainDesignPatternsStructurale(1).md>)
 
 5. Design Patterns Comportamentale
+
    - [Link here](<./Recap/BehavioralDB(4)/0_IntroinDesignPatternsComportamentale.md>)
+
+6. Testare Unitara
+   - [Link here](<./Recap/UnitTesting(5)/0_IntroInUnitTesting.md>)

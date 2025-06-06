@@ -419,3 +419,7 @@ public void testLogoutFaraConectare() {
     s.logout(); // fără apelul anterior la conectare()
 }
 ```
+
+---
+
+[Back](0_IntroInUnitTesting.md)
